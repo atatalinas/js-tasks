@@ -1,8 +1,3 @@
-/* 
-    Функкция удаляет deleteCount элементов из массива, начиная с индеса startIndex, 
-    и вставляет на место удаленных элементов значение valueToInsert
-*/
-
 const splicer = (arr, startIndex, deleteCount, valueToInsert) => {
     if (Array.isArray(arr)) {
         arr.splice(startIndex, deleteCount, valueToInsert);

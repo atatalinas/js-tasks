@@ -1,7 +1,3 @@
-/* 
-    Функкция удаляет первый и последний символы строки 
-*/
-
 const deleteChars = (str) => {
     if (typeof str === "string") {
         return str.substr(1, str.length - 2);

@@ -1,7 +1,3 @@
-/* 
-    Функкция находит минимальное из двух чисел 
-*/
-
 const findMinNumber = (firstNumber, secondNumber) => {
     if (typeof firstNumber === "number" && typeof secondNumber === "number") {
         if (firstNumber > secondNumber)

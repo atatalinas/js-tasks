@@ -1,7 +1,3 @@
-/* 
-    Функкция находит сумму цифр числаs
-*/
-
 const sumOfDigits = (number) => {
     if (typeof number === "number") {
         while (number.toString().length !== 1) {
