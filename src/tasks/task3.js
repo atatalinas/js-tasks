@@ -9,6 +9,10 @@ const isEven = (n) => {
         return "Параметр не число";
 }
 
+console.log(isEven(5));
+console.log(isEven(-4));
+console.log(isEven("abc"));
+
 function isEvenVers2(n) {
     if (typeof n === "number")
         return n % 2 == 0;
@@ -16,9 +20,6 @@ function isEvenVers2(n) {
         return "Параметр не число";
 }
 
-console.log(isEven(5));
-console.log(isEven(-4));
-console.log(isEven("abc"));
 
 console.log(isEvenVers2(5));
 console.log(isEvenVers2(-4));

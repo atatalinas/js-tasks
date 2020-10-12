@@ -17,6 +17,11 @@ const findMinNumber = (firstNumber, secondNumber) => {
     }
 }
 
+console.log(findMinNumber(9, -4));
+console.log(findMinNumber(5, 5));
+console.log(findMinNumber(-16, 28));
+console.log(findMinNumber("abc", 28));
+
 function findMinNumberVers2(firstNumber, secondNumber) {
     if (typeof firstNumber === "number" && typeof secondNumber === "number") {
         if (firstNumber > secondNumber)
@@ -32,10 +37,6 @@ function findMinNumberVers2(firstNumber, secondNumber) {
     }
 }
 
-console.log(findMinNumber(9, -4));
-console.log(findMinNumber(5, 5));
-console.log(findMinNumber(-16, 28));
-console.log(findMinNumber("abc", 28));
 
 console.log(findMinNumberVers2(9, -4));
 console.log(findMinNumberVers2(5, 5));

@@ -15,6 +15,10 @@ const sumOfDigits = (number) => {
     }
 }
 
+console.log(sumOfDigits(156));
+console.log(sumOfDigits("sad"));
+console.log(sumOfDigits(123));
+
 function sumOfDigitsVers2(number) {
     if (typeof number === "number") {
         while (number.toString().length !== 1) {
@@ -27,10 +31,6 @@ function sumOfDigitsVers2(number) {
         return "Параметр должен быть числом";
     }
 }
-
-console.log(sumOfDigits(156));
-console.log(sumOfDigits("sad"));
-console.log(sumOfDigits(123));
 
 console.log(sumOfDigitsVers2(156));
 console.log(sumOfDigitsVers2("sad"));
