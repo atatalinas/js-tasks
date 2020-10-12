@@ -1,3 +1,7 @@
+/* 
+    Функкция определяет четное ли число 
+*/
+
 const isEven = (n) => {
     if (typeof n === "number")
         return n % 2 == 0;
