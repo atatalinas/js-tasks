@@ -10,9 +10,8 @@ const sumOfDigits = (number) => {
             });
         } 
         return number;
-    } else {
-        return "Параметр должен быть числом";
-    }
+    } 
+    return "Параметр должен быть числом";
 }
 
 console.log(sumOfDigits(156));
@@ -27,9 +26,8 @@ function sumOfDigitsVers2(number) {
             });
         } 
         return number;
-    } else {
-        return "Параметр должен быть числом";
     }
+    return "Параметр должен быть числом";
 }
 
 console.log(sumOfDigitsVers2(156));

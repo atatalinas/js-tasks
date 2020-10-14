@@ -2,7 +2,11 @@
     Функкция возвращает приветствие для пользователя 
 */
 const sayHello = (name) => {
-    return `Hello, ${name}!`;
+    if (typeof name === "string") {
+        if (name === "Mark") return `Hi, ${name}!`;
+        return `Hello, ${name}!`;
+    }
+    return "Параметр не строка";    
 }
 
 console.log(sayHello("Oleg"));
@@ -10,7 +14,11 @@ console.log(sayHello("Viktor"));
 console.log(sayHello("Mark"));
 
 function sayHelloVers2(name){
-    return `Hello, ${name}!`;
+    if (typeof name === "string") {
+        if (name === "Mark") return `Hi, ${name}!`;
+        return `Hello, ${name}!`;
+    }
+    return "Параметр не строка";     
 }
 
 console.log(sayHelloVers2("Oleg"));

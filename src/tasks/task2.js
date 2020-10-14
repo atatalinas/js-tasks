@@ -4,17 +4,9 @@
 
 const findMinNumber = (firstNumber, secondNumber) => {
     if (typeof firstNumber === "number" && typeof secondNumber === "number") {
-        if (firstNumber > secondNumber)
-        {
-            return `Меньшее из чисел (${firstNumber}, ${secondNumber}): ${secondNumber}`;
-        } else if (firstNumber === secondNumber) {
-            return `Числа ${firstNumber}, ${secondNumber} равны `;
-        } else {
-            return `Меньшее из чисел (${firstNumber}, ${secondNumber}): ${firstNumber}`;
-        }
-    } else {
-        return "Исходные данные должны быть числами";
-    }
+        return (firstNumber < secondNumber) ? firstNumber : secondNumber;
+    } 
+    return "Исходные данные должны быть числами";
 }
 
 console.log(findMinNumber(9, -4));
@@ -24,19 +16,10 @@ console.log(findMinNumber("abc", 28));
 
 function findMinNumberVers2(firstNumber, secondNumber) {
     if (typeof firstNumber === "number" && typeof secondNumber === "number") {
-        if (firstNumber > secondNumber)
-        {
-            return `Меньшее из чисел (${firstNumber}, ${secondNumber}): ${secondNumber}`;
-        } else if (firstNumber === secondNumber) {
-            return `Числа ${firstNumber}, ${secondNumber} равны `;
-        } else {
-            return `Меньшее из чисел (${firstNumber}, ${secondNumber}): ${firstNumber}`;
-        }
-    } else {
-        return "Исходные данные должны быть числами";
-    }
+        return (firstNumber < secondNumber) ? firstNumber : secondNumber;
+    } 
+    return "Исходные данные должны быть числами";
 }
-
 
 console.log(findMinNumberVers2(9, -4));
 console.log(findMinNumberVers2(5, 5));

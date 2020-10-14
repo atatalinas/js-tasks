@@ -7,9 +7,8 @@ const splicer = (arr, startIndex, deleteCount, valueToInsert) => {
     if (Array.isArray(arr)) {
         arr.splice(startIndex, deleteCount, valueToInsert);
         return arr;
-    } else {
-        return "Первый парметр должен быть массивом";
-    }
+    } 
+    return "Первый парметр должен быть массивом";
 }
 
 numericArray = [10, 20, 30, 40, 50, 60, 70];
@@ -23,9 +22,8 @@ function splicerVers2(arr, startIndex, deleteCount, valueToInsert) {
     if (Array.isArray(arr)) {
         arr.splice(startIndex, deleteCount, valueToInsert);
         return arr;
-    } else {
-        return "Первый парметр должен быть массивом";
     }
+    return "Первый парметр должен быть массивом";
 }
 
 console.log(splicerVers2(numericArray, 1, 3, 4));
