@@ -9,7 +9,7 @@ const modifyArray = (mixedArray) => {
         mixedArray = mixedArray.filter(element => typeof element === 'number' || typeof element === 'string');
         return mixedArray.map(element => {
             if (typeof element === "number") return 2 * element;
-            else if (typeof element === "string") return element.toUpperCase();
+            return element.toUpperCase();
         });
     }
     return "Error";
