@@ -6,7 +6,7 @@
 
 const modifyArray = (mixedArray) => {
     if (Array.isArray(mixedArray)) {
-        copiedArray = [...mixedArray];
+        let copiedArray = [...mixedArray];
         copiedArray = copiedArray.filter(element => typeof element === 'number' || typeof element === 'string');
         return copiedArray.map(element => {
             if (typeof element === "number") return 2 * element;

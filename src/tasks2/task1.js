@@ -5,7 +5,7 @@
 const multiplyArrayElements = (numericArray) => {
     if (Array.isArray(numericArray)) {
         if (numericArray.every(elem => typeof elem === "number")) {
-            copiedArray = [...numericArray];
+            const copiedArray = [...numericArray];
             copiedArray.map((element, index) => copiedArray[index] = 3 * element);
             return copiedArray;
         }
