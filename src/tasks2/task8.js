@@ -4,8 +4,8 @@
 
 
 const trimString = (initString, amountOfSymbols) => {
-    if (typeof initString !== "string") return "Error";
-    return initString.length <= amountOfSymbols ? initString : initString.substr(0, amountOfSymbols).concat("...");
+    if (typeof initString !== "string" || typeof amountOfSymbols !== "number") return "Error";
+    return initString.length <= amountOfSymbols ? initString : `${initString.slice(0, amountOfSymbols)}...`;
 }
 
 str = "I love Javascript";

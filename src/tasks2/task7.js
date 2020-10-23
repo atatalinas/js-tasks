@@ -5,8 +5,8 @@
 const findName = (nameArray, userName) => {
     if (Array.isArray(nameArray)) {
         if (nameArray.every(element => typeof element === "string")) {
-            return nameArray.find(element => element === userName) === userName ? 
-            nameArray.filter(element => element !== userName) : "Пользователь не найден";
+            const index = nameArray.findIndex(element => element === userName);
+            return index !== -1 ? nameArray.splice(index, 1) : "Пользователь не найден";
         }
     }
     return "Error";

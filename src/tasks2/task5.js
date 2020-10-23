@@ -5,9 +5,10 @@
 
 
 const modifyArray = (mixedArray) => {
-    if (Array.isArray(mixedArray)) {      
-        mixedArray = mixedArray.filter(element => typeof element === 'number' || typeof element === 'string');
-        return mixedArray.map(element => {
+    if (Array.isArray(mixedArray)) {
+        copiedArray = [...mixedArray];
+        copiedArray = copiedArray.filter(element => typeof element === 'number' || typeof element === 'string');
+        return copiedArray.map(element => {
             if (typeof element === "number") return 2 * element;
             return element.toUpperCase();
         });
