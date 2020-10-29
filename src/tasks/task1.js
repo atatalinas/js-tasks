@@ -15,6 +15,14 @@ const users = [
 	{
 		id: 2,
 		first_name: 'Petr',
+		last_name: 'Stepanov',
+		email: 'gfrediani1@senate.gov',
+		gender: 'Male',
+		ip_address: '229.179.4.212',
+	},
+	{
+		id: 3,
+		first_name: 'Michael',
 		last_name: 'Jackson',
 		email: 'gfrediani1@senate.gov',
 		gender: 'Male',
@@ -28,17 +36,17 @@ const sortByGender = (usersArray) => {
 	const result = {};
 	result['women'] = [];
 	result['men'] = [];
-	usersArray.forEach((user, index) => {
-		const copyUser = { ...user };
-		if (copyUser.hasOwnProperty('first_name') && copyUser.hasOwnProperty('last_name')) {
-			copyUser['fullName'] = `${copyUser.first_name} ${copyUser.last_name}`;
-			delete copyUser.first_name;
-			delete copyUser.last_name;
-		}
-		if (copyUser.hasOwnProperty('gender') && copyUser.gender === "Female") {
-			result['women'].push(copyUser);
-		} else {
-			result['men'].push(copyUser);
+	copiedArray = [...usersArray];
+	copiedArray.forEach(user => {
+		if (user.hasOwnProperty('first_name') && user.hasOwnProperty('last_name') && user.hasOwnProperty('gender')) {
+			user['fullName'] = `${user.first_name} ${user.last_name}`;
+			delete user.first_name;
+			delete user.last_name;
+			if (user.gender === "Female") {
+				result['women'].push(user);
+			} else {
+				result['men'].push(user);
+			}
 		}
 	})
 
