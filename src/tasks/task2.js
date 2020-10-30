@@ -27,8 +27,8 @@ const initialData = [
 
 const sortUsersByAge = (usersArray) => {
     if (!Array.isArray(usersArray)) return;
-    const newArray = usersArray.filter(user => user.age >= 21);
-    return newArray.sort((currentUser, nextUser) => currentUser.username > nextUser.username ? 1 : -1);
+    return usersArray.filter(user => user.age >= 21).
+        sort((currentUser, nextUser) => currentUser.username > nextUser.username ? 1 : -1);
 }
 
 console.log(sortUsersByAge(initialData));

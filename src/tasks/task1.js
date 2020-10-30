@@ -31,26 +31,31 @@ const users = [
 ];
 
 
+
 const sortByGender = (usersArray) => {
 	if (!Array.isArray(usersArray)) return;
-	const result = {};
-	result['women'] = [];
-	result['men'] = [];
-	copiedArray = [...usersArray];
-	copiedArray.forEach(user => {
-		if (user.hasOwnProperty('first_name') && user.hasOwnProperty('last_name') && user.hasOwnProperty('gender')) {
-			user['fullName'] = `${user.first_name} ${user.last_name}`;
-			delete user.first_name;
-			delete user.last_name;
-			if (user.gender === "Female") {
-				result['women'].push(user);
-			} else {
-				result['men'].push(user);
+	const copiedArray = [...usersArray];
+	return copiedArray.reduce((result, user) => {
+		if (user.first_name && user.last_name && user.gender) {
+			user = {
+				id: user.id,
+				full_name: user.first_name + user.last_name,
+				email: user.email,
+				gender: user.gender,
+				ip_address: user.ip_address,
 			}
-		}
-	})
 
-	return result;
+			if (user.gender.toLowerCase() === 'female') {
+				result.women.push(user);
+
+			} else {
+				result.men.push(user);
+			}
+
+			return result;
+		}
+		return;
+	}, { 'women': [], 'men': [] });
 }
 
 
