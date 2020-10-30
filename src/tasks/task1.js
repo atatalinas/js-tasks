@@ -37,7 +37,7 @@ const sortByGender = (usersArray) => {
 	const copiedArray = [...usersArray];
 	return copiedArray.reduce((result, user) => {
 		if (user.first_name && user.last_name && user.gender) {
-			user = {
+			const userToInsert = {
 				id: user.id,
 				full_name: user.first_name + user.last_name,
 				email: user.email,
@@ -46,10 +46,10 @@ const sortByGender = (usersArray) => {
 			}
 
 			if (user.gender.toLowerCase() === 'female') {
-				result.women.push(user);
+				result.women.push(userToInsert);
 
 			} else {
-				result.men.push(user);
+				result.men.push(userToInsert);
 			}
 
 			return result;
